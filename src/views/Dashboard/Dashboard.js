@@ -493,15 +493,14 @@ class Dashboard extends Component {
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem disabled>Disabled action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
+                      <DropdownItem>Details</DropdownItem>
+                      <DropdownItem>Compare</DropdownItem>
+                      <DropdownItem disabled>Disabled widget</DropdownItem>
                     </DropdownMenu>
                   </ButtonDropdown>
                 </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                <div className="text-value">$90,823.75</div>
+                <div>Actual Cost</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
                 <Line data={cardChartData2} options={cardChartOpts2} height={70} />
@@ -515,17 +514,17 @@ class Dashboard extends Component {
                 <ButtonGroup className="float-right">
                   <Dropdown id='card2' isOpen={this.state.card2} toggle={() => { this.setState({ card2: !this.state.card2 }); }}>
                     <DropdownToggle className="p-0" color="transparent">
-                      <i className="icon-location-pin"></i>
+                      <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
+                      <DropdownItem>Details</DropdownItem>
+                      <DropdownItem>Compare</DropdownItem>
+                      <DropdownItem>Disabled widget</DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
                 </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                <div className="text-value">$100,256.45</div>
+                <div>Last Month</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
                 <Line data={cardChartData1} options={cardChartOpts1} height={70} />
@@ -542,17 +541,17 @@ class Dashboard extends Component {
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
+                      <DropdownItem>Details</DropdownItem>
+                      <DropdownItem>Compare</DropdownItem>
+                      <DropdownItem>Disabled widget</DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
                 </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                <div className="text-value">$100,750.20</div>
+                <div>Actual Projection</div>
               </CardBody>
               <div className="chart-wrapper" style={{ height: '70px' }}>
-                <Line data={cardChartData3} options={cardChartOpts3} height={70} />
+                 <Line data={cardChartData3} options={cardChartOpts3} height={70} />
               </div>
             </Card>
           </Col>
@@ -566,14 +565,14 @@ class Dashboard extends Component {
                       <i className="icon-settings"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
-                      <DropdownItem>Action</DropdownItem>
-                      <DropdownItem>Another action</DropdownItem>
-                      <DropdownItem>Something else here</DropdownItem>
+                      <DropdownItem>Details</DropdownItem>
+                      <DropdownItem>Compare</DropdownItem>
+                      <DropdownItem>Disabled widget</DropdownItem>
                     </DropdownMenu>
                   </ButtonDropdown>
                 </ButtonGroup>
-                <div className="text-value">9.823</div>
-                <div>Members online</div>
+                <div className="text-value">18</div>
+                <div>EC2 Instances</div>
               </CardBody>
               <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
                 <Bar data={cardChartData4} options={cardChartOpts4} height={70} />
@@ -587,8 +586,8 @@ class Dashboard extends Component {
               <CardBody>
                 <Row>
                   <Col sm="5">
-                    <CardTitle className="mb-0">Traffic</CardTitle>
-                    <div className="small text-muted">November 2015</div>
+                    <CardTitle className="mb-0">Cost History</CardTitle>
+                    <div className="small text-muted">February 2019 - Thousands</div>
                   </Col>
                   <Col sm="7" className="d-none d-sm-inline-block">
                     <Button color="primary" className="float-right"><i className="icon-cloud-download"></i></Button>
@@ -608,28 +607,28 @@ class Dashboard extends Component {
               <CardFooter>
                 <Row className="text-center">
                   <Col sm={12} md className="mb-sm-2 mb-0">
-                    <div className="text-muted">Visits</div>
-                    <strong>29.703 Users (40%)</strong>
+                    <div className="text-muted">EC2 Instances</div>
+                    <strong>10 Running Instances (60%)</strong>
                     <Progress className="progress-xs mt-2" color="success" value="40" />
                   </Col>
                   <Col sm={12} md className="mb-sm-2 mb-0 d-md-down-none">
-                    <div className="text-muted">Unique</div>
-                    <strong>24.093 Users (20%)</strong>
+                    <div className="text-muted">Total EC2 Instances</div>
+                    <strong>18 EC2 Instances</strong>
                     <Progress className="progress-xs mt-2" color="info" value="20" />
                   </Col>
                   <Col sm={12} md className="mb-sm-2 mb-0">
-                    <div className="text-muted">Pageviews</div>
-                    <strong>78.706 Views (60%)</strong>
+                    <div className="text-muted">RDS Instances</div>
+                    <strong>9 Running Instances (100%)</strong>
                     <Progress className="progress-xs mt-2" color="warning" value="60" />
                   </Col>
                   <Col sm={12} md className="mb-sm-2 mb-0">
-                    <div className="text-muted">New Users</div>
-                    <strong>22.123 Users (80%)</strong>
+                    <div className="text-muted">New Instances</div>
+                    <strong>4 Instances (10% Up)</strong>
                     <Progress className="progress-xs mt-2" color="danger" value="80" />
                   </Col>
                   <Col sm={12} md className="mb-sm-2 mb-0 d-md-down-none">
-                    <div className="text-muted">Bounce Rate</div>
-                    <strong>Average Rate (40.15%)</strong>
+                    <div className="text-muted">EC2 RIs</div>
+                    <strong>12 RI (70%)</strong>
                     <Progress className="progress-xs mt-2" color="primary" value="40" />
                   </Col>
                 </Row>

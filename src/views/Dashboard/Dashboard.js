@@ -494,7 +494,7 @@ class Dashboard extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Details</DropdownItem>
-                      <DropdownItem>Compare</DropdownItem>
+                      <DropdownItem>Share</DropdownItem>
                       <DropdownItem disabled>Disabled widget</DropdownItem>
                     </DropdownMenu>
                   </ButtonDropdown>
@@ -518,7 +518,7 @@ class Dashboard extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Details</DropdownItem>
-                      <DropdownItem>Compare</DropdownItem>
+                      <DropdownItem>Share</DropdownItem>
                       <DropdownItem>Disabled widget</DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
@@ -542,7 +542,7 @@ class Dashboard extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Details</DropdownItem>
-                      <DropdownItem>Compare</DropdownItem>
+                      <DropdownItem>Share</DropdownItem>
                       <DropdownItem>Disabled widget</DropdownItem>
                     </DropdownMenu>
                   </Dropdown>
@@ -566,7 +566,7 @@ class Dashboard extends Component {
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Details</DropdownItem>
-                      <DropdownItem>Compare</DropdownItem>
+                      <DropdownItem>Share</DropdownItem>
                       <DropdownItem>Disabled widget</DropdownItem>
                     </DropdownMenu>
                   </ButtonDropdown>

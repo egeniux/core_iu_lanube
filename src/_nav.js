@@ -1,12 +1,272 @@
 export default {
   items: [
     {
-      name: 'Dashboard',
+      title: true,
+      name: 'Amazon',
+      wrapper: {            // optional wrapper object
+        element: '',        // required valid HTML5 element tag
+        attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
+      },
+      class: ''             // optional class names space delimited list for title item ex: "text-center"
+    },
+    {
+      name: 'AWS Services',
+      url: '/theme/colors',
+      icon: 'icon-cloud-download',
+      children: [
+        {
+          name: 'EC2 Instances',
+          url: '/dashboard',
+          icon: 'icon-cloud-download',
+          children: [
+            {
+              name: 'Cost',
+              url: '/base/breadcrumbs',
+              icon: 'icon-chart',
+            },
+            {
+              name: 'Performance',
+              url: '/base/cards',
+              icon: 'icon-graph',
+            },
+            {
+              name: 'Savings',
+              url: '/base/cards',
+              icon: 'icon-size-actual',
+            },
+         ],     
+    },
+    {
+      name: 'Amazon Redshift',
       url: '/dashboard',
-      icon: 'icon-speedometer',
+      icon: 'icon-cloud-download',
+      children: [
+        {
+          name: 'Cost',
+          url: '/base/breadcrumbs',
+          icon: 'icon-chart',
+        },
+        {
+          name: 'Performance',
+          url: '/base/cards',
+          icon: 'icon-graph',
+        },
+        {
+          name: 'Savings',
+          url: '/base/cards',
+          icon: 'icon-size-actual',
+        },
+     ],     
+    },
+    {
+      name: 'Amazon EMR',
+      url: '/dashboard',
+      icon: 'icon-cloud-download',
+      children: [
+        {
+          name: 'Cost',
+          url: '/base/breadcrumbs',
+          icon: 'icon-chart',
+        },
+        {
+          name: 'Performance',
+          url: '/base/cards',
+          icon: 'icon-graph',
+        },
+        {
+          name: 'Savings',
+          url: '/base/cards',
+          icon: 'icon-size-actual',
+        },
+    ],     
+    },
+    {
+      name: 'Amazon Athena',
+      url: '/dashboard',
+      icon: 'icon-cloud-download',
+      children: [
+        {
+          name: 'Cost',
+          url: '/base/breadcrumbs',
+          icon: 'icon-chart',
+        },
+        {
+          name: 'Performance',
+          url: '/base/cards',
+          icon: 'icon-graph',
+        },
+        {
+          name: 'Savings',
+          url: '/base/cards',
+          icon: 'icon-size-actual',
+        },
+    ],     
+    },
+    {
+      name: 'Amazon S3',
+      url: '/dashboard',
+      icon: 'icon-cloud-download',
+      children: [
+        {
+          name: 'Cost',
+          url: '/base/breadcrumbs',
+          icon: 'icon-chart',
+        },
+        {
+          name: 'Savings',
+          url: '/base/cards',
+          icon: 'icon-size-actual',
+        },
+    ],     
+    },
+  ]
+},
+{
+  title: true,
+  name: 'Microsoft',
+  wrapper: {            // optional wrapper object
+    element: '',        // required valid HTML5 element tag
+    attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
+  },
+  class: ''             // optional class names space delimited list for title item ex: "text-center"
+},
+{
+  name: 'Azure Services',
+  url: '/theme/colors',
+  icon: 'icon-cloud-download',
+  children: [
+    {
+      name: 'Virtual Machines',
+      url: '/dashboard',
+      icon: 'icon-cloud-download',
+      children: [
+        {
+          name: 'Cost',
+          url: '/base/breadcrumbs',
+          icon: 'icon-chart',
+        },
+        {
+          name: 'Performance',
+          url: '/base/cards',
+          icon: 'icon-graph',
+        },
+        {
+          name: 'Savings',
+          url: '/base/cards',
+          icon: 'icon-size-actual',
+        },
+          
+     ]
+  },
+  {
+    name: 'Azure SQL Database',
+    url: '/dashboard',
+    icon: 'icon-cloud-download',
+    children: [
+      {
+        name: 'Cost',
+        url: '/base/breadcrumbs',
+        icon: 'icon-chart',
+      },
+      {
+        name: 'Performance',
+        url: '/base/cards',
+        icon: 'icon-graph',
+      },
+      {
+        name: 'Savings',
+        url: '/base/cards',
+        icon: 'icon-size-actual',
+      },
+        
+   ]
+  },
+  {
+    name: 'Azure Kubernetes',
+    url: '/dashboard',
+    icon: 'icon-cloud-download',
+    children: [
+      {
+        name: 'Cost',
+        url: '/base/breadcrumbs',
+        icon: 'icon-chart',
+      },
+      {
+        name: 'Performance',
+        url: '/base/cards',
+        icon: 'icon-graph',
+      },
+      {
+        name: 'Savings',
+        url: '/base/cards',
+        icon: 'icon-size-actual',
+      },
+        
+   ]
+},
+]
+},
+
+{
+  title: true,
+  name: 'Google',
+  wrapper: {            // optional wrapper object
+    element: '',        // required valid HTML5 element tag
+    attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
+  },
+  class: ''             // optional class names space delimited list for title item ex: "text-center"
+},
+{
+  name: 'GCP Services',
+  url: '/theme/colors',
+  icon: 'icon-cloud-download',
+  children: [
+    {
+      name: 'Virtual Machines',
+      url: '/dashboard',
+      icon: 'icon-cloud-download',
+      children: [
+        {
+          name: 'Cost',
+          url: '/base/breadcrumbs',
+          icon: 'icon-chart',
+        },
+        {
+          name: 'Performance',
+          url: '/base/cards',
+          icon: 'icon-graph',
+        },
+        {
+          name: 'Savings',
+          url: '/base/cards',
+          icon: 'icon-size-actual',
+        },
+          
+     ]
+  },
+]
+},
+    {
+      title: true,
+      name: 'Pricing',
+      wrapper: {            // optional wrapper object
+        element: '',        // required valid HTML5 element tag
+        attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
+      },
+      class: ''             // optional class names space delimited list for title item ex: "text-center"
+    },
+    {
+      name: 'Price Evaluation',
+      url: '/base/cards',
+      icon: 'icon-chart',
+    },
+    {
+      name: 'SERVICES',
+      url: '/dashboard',
+      icon: 'icon-plus',
       badge: {
         variant: 'info',
-        text: 'NEW',
+        text: 'ADD',
       },
     },
     {

@@ -1,19 +1,12 @@
 import React, { Component } from 'react';
 import {
-  Form,
-  FormGroup,
-  Input,
-  InputGroup,
-  InputGroupAddon,
+  Collapse,
   Card, 
   Row, 
   Col, 
   CardHeader, 
   CardBody, 
-  ButtonDropdown, 
-  DropdownItem, 
-  DropdownToggle, 
-  DropdownMenu} from 'reactstrap';
+  Fade} from 'reactstrap';
 
 class Price extends Component {
 
@@ -27,11 +20,11 @@ class Price extends Component {
       fadeIn: true,
       timeout: 300,
       dropdownOpen: new Array(19).fill(false),
-      searchItems: ['Operatives System', 'vCPUs', 'Memory'],
     };
   }
 
   toggle(i) {
+    this.setState({ collapse: !this.state.collapse });
     const newArray = this.state.dropdownOpen.map((element, index) => { return (index === i ? !element : false); });
     this.setState({
       dropdownOpen: newArray,
@@ -53,28 +46,48 @@ class Price extends Component {
                 <i className="fa fa-align-justify "></i><strong>Price Evaluation</strong>
               </CardHeader>
               <CardBody>
-                  <Form action="" method="post" className="form-horizontal">
-                  <FormGroup row>
-                    <Col md="12">
-                      <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                          <ButtonDropdown isOpen={this.state.first}
-                                          toggle={() => { this.setState({ first: !this.state.first }); }}>
-                            <DropdownToggle caret color="primary">
-                              Search
-                            </DropdownToggle>
-                            <DropdownMenu className={this.state.first ? 'show' : ''}>
-                              <DropdownItem>{this.state.searchItems[0] }</DropdownItem>
-                              <DropdownItem>{this.state.searchItems[1]}</DropdownItem>
-                              <DropdownItem>{this.state.searchItems[2]}</DropdownItem>
-                            </DropdownMenu>
-                          </ButtonDropdown>
-                        </InputGroupAddon>
-                        <Input type="text" id="input1-group3" name="input1-group3" />
-                      </InputGroup>
-                    </Col>
-                  </FormGroup>
-                  </Form>
+                <Row>
+                 <Col xs="12" sm="6" md="4">
+                    <Fade timeout={this.state.timeout} in={this.state.fadeIn}>
+                      <Card>
+                        <CardHeader>
+                          Amazon EC2 Instances
+                          <div className="card-header-actions">
+                            {/*eslint-disable-next-line*/}
+                            <a className="card-header-action btn btn-minimize" data-target="#EC2" onClick={this.toggle}>
+                            <img src="assets/img/aws/AmazonEC2.png" alt="EC2 Instance" height="25" width="25"/>
+                            </a>
+                          </div>
+                        </CardHeader>
+                        <Collapse isOpen={this.state.collapse} id="EC2">
+                          <CardBody>
+                          Amazon Elastic Compute Cloud (Amazon EC2) is a web service that provides secure, resizable compute capacity in the cloud. 
+                          </CardBody>
+                        </Collapse>
+                      </Card>
+                    </Fade>
+                </Col>
+                <Col xs="12" sm="6" md="4">
+                    <Fade timeout={this.state.timeout} in={this.state.fadeIn}>
+                      <Card>
+                        <CardHeader>
+                          Amazon Redshift
+                          <div className="card-header-actions">
+                            {/*eslint-disable-next-line*/}
+                            <a className="card-header-action btn btn-minimize" data-target="#Redshift" onClick={this.toggle}>
+                            <img src="assets/img/aws/AmazonRedshift.png" alt="EC2 Instance" height="25" width="25"/>
+                            </a>
+                          </div>
+                        </CardHeader>
+                        <Collapse isOpen={this.state.collapse} id="Redshift">
+                          <CardBody>
+                          Amazon Redshift is a fast, scalable data warehouse that makes it simple and cost-effective to analyze all your data across your data warehouse and data lake. 
+                          </CardBody>
+                        </Collapse>
+                      </Card>
+                    </Fade>
+                </Col>
+                </Row>
               </CardBody>
             </Card>
           </Col>

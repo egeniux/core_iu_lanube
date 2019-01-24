@@ -257,7 +257,7 @@ export default {
     },
     {
       name: 'Price Evaluation',
-      url: '/base/cards',
+      url: '/price',
       icon: 'icon-chart',
     },
     {
